@@ -1,6 +1,5 @@
 # CMOR 438 Data Science & Machine Learning Example Repo
 
-This repository mirrors the CMOR 438 template structure maintained by Randy R. Davila.
 
 ## Maintainer
 
