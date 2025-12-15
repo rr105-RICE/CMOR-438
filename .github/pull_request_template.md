@@ -2,6 +2,8 @@
 Thank you for your contribution! Please fill out the sections below to help reviewers
 understand the intent, context, and impact of this PR.
 
+Primary maintainer contact: Ricardo Rivera (rr105)
+
 Tips:
 - Keep the title clear and action-oriented (e.g., "Add X", "Fix Y", "Refactor Z").
 - Use screenshots / gifs for UI changes.
