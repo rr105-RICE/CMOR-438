@@ -17,3 +17,4 @@
         "- Train a **LinearRegression** model (normal equation)\n",
         "- Evaluate using regression metrics\n",
         "- Visualize predictions and residuals\n"
+        
