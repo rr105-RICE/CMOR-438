@@ -31,3 +31,7 @@ where = ["src"]
 addopts = "--doctest-modules"
 doctest_optionflags = ["NORMALIZE_WHITESPACE", "ELLIPSIS"]
 testpaths = ["src/rice_ml/supervised_learning", "tests"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["rice_ml*"]
