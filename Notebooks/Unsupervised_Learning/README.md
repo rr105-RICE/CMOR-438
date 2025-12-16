@@ -1,20 +1,67 @@
-## Unsupervised Learning Notebooks
+# Unsupervised Learning (Notebooks)
 
-This folder contains **unsupervised learning** examples (clustering, dimensionality reduction, and graph/community structure) implemented in Jupyter notebooks.
+This folder contains **unsupervised learning** notebooks (clustering, dimensionality reduction, and graph/community structure). These examples are designed to highlight different definitions of “structure” in data: **distance, density, variance, and connectivity**.
 
-### What’s inside
+---
 
-- **Community Detection**: `Community Detection/community_detection_example.ipynb`
-- **DBSCAN**: `DBScan/dbscan_example.ipynb`
-- **K-Means Clustering**: `K-Means Clustering/k_means_clustering.ipynb`
-- **PCA**: `PCA/pca_example.ipynb`
+## Design Philosophy
 
-### How to run
+- **Concept-first notebooks** that make each algorithm’s assumptions explicit
+- **Step-by-step workflows** (fit → inspect → interpret)
+- **Readable code** intended for learning rather than production use
 
-Open any `.ipynb` in Jupyter and run the cells top-to-bottom. From the repo root you can install common dependencies with:
+---
+
+## Folder Structure
+
+```text
+Unsupervised_Learning/
+├── Community Detection/
+│   ├── community_detection_example.ipynb
+│   └── README.md
+├── DBScan/
+│   ├── dbscan_example.ipynb
+│   └── README.md
+├── K-Means Clustering/
+│   ├── k_means_clustering.ipynb
+│   └── README.md
+└── PCA/
+    ├── pca_example.ipynb
+    └── README.md
+```
+
+---
+
+## Topics Included
+
+- **K-Means Clustering**: centroid-based clustering using distance
+- **DBSCAN**: density-based clustering with noise detection
+- **PCA**: variance-based dimensionality reduction
+- **Community Detection**: graph-based clustering using connectivity/local consensus
+
+---
+
+## How to Run
+
+From the repository root:
 
 ```bash
 python -m venv .venv
 source .venv/bin/activate
 pip install -e .[dev]
 ```
+
+Open any `.ipynb` in Jupyter and run the cells top-to-bottom.
+
+---
+
+## Limitations
+
+- Examples are designed for small/medium datasets
+- Focus is on interpretability and learning, not speed
+
+---
+
+## Conclusion
+
+These notebooks provide hands-on intuition for unsupervised learning methods that discover structure without labels.
