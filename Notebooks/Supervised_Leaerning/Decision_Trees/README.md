@@ -1,13 +1,47 @@
-## Decision Trees (Supervised Learning)
+# Decision Trees (Notebook)
 
-### Purpose
+This notebook demonstrates a **decision tree** workflow for classification, focusing on *how greedy splitting decisions are made* and how model complexity affects generalization.
 
-Demonstrates a **decision tree** workflow for classification, including training and evaluating a tree model.
+---
 
-### Files
+## Design Philosophy
+
+- **Algorithmic transparency** over performance tricks
+- **Interpretability first**: connect splits to decision logic
+- **Hands-on experimentation**: vary depth/criteria and observe behavior
+
+---
+
+## Files
 
 - **Notebook**: `decision_tree_ex.ipynb`
 
-### How to run
+---
 
-Open `decision_tree_ex.ipynb` in Jupyter and run the cells top-to-bottom. If you installed the repo in editable mode (`pip install -e .[dev]`), you can also import and reuse code from `rice_ml`.
+## What this notebook covers
+
+- Greedy recursive splitting and impurity intuition  
+- Training vs. evaluation workflow and common failure modes (overfitting)  
+- The impact of depth/leaf constraints on accuracy and stability
+
+---
+
+## How to run
+
+From the repo root:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -e .
+```
+
+Then open `decision_tree_ex.ipynb` and run the cells top-to-bottom.
+
+---
+
+## Limitations
+
+- Not optimized for large datasets
+- Greedy splitting can be unstable (small data changes can alter the tree)
+
