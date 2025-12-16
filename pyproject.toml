@@ -21,6 +21,7 @@ package-dir = { "" = "src" }
 
 [tool.setuptools.packages.find]
 where = ["src"]
+include = ["rice_ml*"]
 
 # [tool.pytest.ini_options]
 # minversion = "6.0"
@@ -31,7 +32,3 @@ where = ["src"]
 addopts = "--doctest-modules"
 doctest_optionflags = ["NORMALIZE_WHITESPACE", "ELLIPSIS"]
 testpaths = ["src/rice_ml/supervised_learning", "tests"]
-
-[tool.setuptools.packages.find]
-where = ["src"]
-include = ["rice_ml*"]
