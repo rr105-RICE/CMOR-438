@@ -128,7 +128,10 @@ class KNNClassifier(_KNNBase):
 class KNNRegressor(_KNNBase):
     def fit(self, X, y):
         X = _as2d_float(X, "X")
-        y = _as1d(y, "y").astype(float)
+        try:
+            y = _as1d(y, "y").astype(float)
+        except (TypeError, ValueError) as e:
+            raise TypeError("y must be numeric for regression.") from e
         if X.shape[0] != y.shape[0]:
             raise ValueError("Length mismatch.")
         if self.n_neighbors > X.shape[0]:
@@ -150,5 +153,9 @@ class KNNRegressor(_KNNBase):
         ss_res = ((y_true - y_pred)**2).sum()
         ss_tot = ((y_true - y_true.mean())**2).sum()
         if ss_tot == 0:
+            # Only well-defined if evaluating *exactly* on training points.
+            Xq = _as2d_float(X, "X")
+            if ss_res == 0 and self._X is not None and np.array_equal(Xq, self._X):
+                return 1.0
             raise ValueError("R^2 undefined for constant y.")
         return float(1 - ss_res/ss_tot)
