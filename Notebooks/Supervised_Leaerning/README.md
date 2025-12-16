@@ -1,27 +1,87 @@
-## Supervised Learning Notebooks
+# rice_ml — Supervised Learning Notebooks
 
-This folder contains **supervised learning** examples (classification/regression) implemented in Jupyter notebooks.
+This folder contains **supervised learning** walkthroughs implemented as Jupyter notebooks. The notebooks emphasize **from-scratch reasoning** and **algorithm transparency**, pairing mathematical intuition with runnable code.
 
-### What’s inside
+These are intended for learning and experimentation rather than production modeling.
 
-- **Perceptron**: ` Perceptron/perceptron_example.ipynb`
-- **Decision Trees**: `Decision_Trees/decision_tree_ex.ipynb`
-- **Ensemble Methods**: `Ensemble_Methods/ensemble_methods_example.ipynb`
-- **Gradient Descent**: `Gradient_Descent/Gradient_Descent,note.ipynb`
-- **KNN**: `KNN/KNN_example.ipynb` (uses `KNN/iris.csv`)
-- **Linear Regression**: `Linear_Regression/linear_regression_boston.ipynb`
-- **Logistic Regression**: `Logistic Regression/logistic_regression_pima.ipynb`
-- **Multilayer Perceptron**: `Multilayer Perceptron/multilayer_perceptron_example.ipynb`
-- **Regression Trees**: `Regression Trees/regression_trees_example.ipynb`
+---
 
-### How to run
+## Design Philosophy
 
-1. Install dependencies (from the repo root):
+- **Educational first**: clarity over optimization
+- **Algorithmic transparency**: show intermediate steps and assumptions
+- **Hands-on exploration**: encourage changing hyperparameters and observing behavior
+- **Minimal reliance on black-box frameworks**
+
+---
+
+## Folder Structure
+
+```text
+Notebooks/Supervised_Leaerning/
+├──  Perceptron/
+├── Decision_Trees/
+├── Ensemble_Methods/
+├── Gradient_Descent/
+├── KNN/
+├── Linear_Regression/
+├── Logistic Regression/
+├── Multilayer Perceptron/
+└── Regression Trees/
+```
+
+Each subfolder contains a notebook and a short README describing what it demonstrates.
+
+---
+
+## Topics Included
+
+- **Perceptron**  
+  Mistake-driven updates for a linear binary classifier.
+
+- **Decision Trees**  
+  Greedy recursive splitting for classification.
+
+- **Ensemble Methods**  
+  Combining multiple learners and comparing to single-model baselines.
+
+- **Gradient Descent**  
+  Step-by-step optimization intuition on simple objectives.
+
+- **k-Nearest Neighbors (kNN)**  
+  Distance-based classification and sensitivity to \(k\) / distance choices.
+
+- **Linear Regression**  
+  Regression fit + evaluation on a classic dataset workflow.
+
+- **Logistic Regression**  
+  Binary classification with probabilities and evaluation metrics.
+
+- **Multilayer Perceptron (MLP)**  
+  Feedforward network intuition and training workflow.
+
+- **Regression Trees**  
+  Tree-based regression with interpretability and error analysis.
+
+---
+
+## How to Run
+
+From the repo root, create an environment and install the package (so notebooks can import `rice_ml` where applicable):
 
 ```bash
 python -m venv .venv
 source .venv/bin/activate
-pip install -e .[dev]
+pip install -e .
 ```
 
-2. Open any `.ipynb` in Jupyter (VS Code, JupyterLab, or classic notebook) and run the cells top-to-bottom.
+Then open any `.ipynb` (VS Code, JupyterLab, or classic notebook) and run cells top-to-bottom.
+
+---
+
+## Limitations
+
+- Not optimized for large datasets
+- Some notebooks assume local relative paths and bundled datasets
+- Focuses on understanding and visualization, not deployment concerns
+
